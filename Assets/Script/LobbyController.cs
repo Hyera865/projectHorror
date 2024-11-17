@@ -183,4 +183,8 @@ public class LobbyController : MonoBehaviour
             }
         }
     }
+
+    public test(){
+        Debug.Log("Hello");
+    }
 }
