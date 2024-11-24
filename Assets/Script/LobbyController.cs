@@ -134,7 +134,7 @@ public class LobbyController : MonoBehaviour
                 NewPlayerItemScript.Ready = player.Ready;
                 NewPlayerItemScript.SetPlayerValues();
 
-                NewPlayerItem.transform.SetParent(PlayerListViewContent.transform);
+                NewPlayerItem.transform.SetParent(PlayerListViewContent.transform, false);
                 NewPlayerItem.transform.localScale = Vector3.one;
 
                 PlayerListItems.Add(NewPlayerItemScript);
@@ -182,5 +182,9 @@ public class LobbyController : MonoBehaviour
                 Destroy(ObjectToRemove);
             }
         }
+    }
+
+    public void StartGame(string SceneName){
+        LocalplayerController.CanStartGame(SceneName);
     }
 }
